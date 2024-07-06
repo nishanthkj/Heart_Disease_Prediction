@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      body {
+        background: linear-gradient(135deg, #e0e0e0, #f8f9fa);
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      header {
+        margin: 20px 0;
+        text-align: center;
+      }
+      main {
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: 90%;
+        max-width: 600px;
+      }
+      footer {
+        margin-top: 20px;
+        text-align: center;
+      }
+      .form-label {
+        font-weight: bold;
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-control {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        animation: fadeIn 1s;
+      }
+      .btn-primary {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+      }
+      .btn-primary:hover {
+        background-color: #0056b3;
+      }
+      .text-danger {
+        color: #dc3545 !important;
+      }
+      .text-success {
+        color: #28a745 !important;
+      }
+      .text-center {
+        text-align: center;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      @keyframes buttonPress {
+        from {
+          transform: scale(1);
+        }
+        to {
+          transform: scale(0.95);
+        }
+      }
+      .btn-animated {
+        animation: buttonPress 0.1s;
+      }
+      .center {
+        display: flex;
+        justify-content: center;
+      }
+    </style>
+    <title>Heart Disease Prediction System</title>
+  </head>
+  <body>
+    <header>
+      <h2>Heart Disease Prediction System</h2>
+    </header>
+    <main>
+      <form method="post">
+        <label class="form-label">Enter Your Age:</label>
+        <input type="number" name="age" class="form-control" required />
+        <label class="form-label">Male Or Female [1/0]:</label>
+        <input type="number" name="sex" class="form-control" required />
+        <label class="form-label">Enter Value of CP:</label>
+        <input type="number" name="cp" class="form-control" required />
+        <label class="form-label">Enter Value of trestbps:</label>
+        <input type="number" name="trestbps" class="form-control" required />
+        <label class="form-label">Enter Value of chol:</label>
+        <input type="number" name="chol" class="form-control" required />
+        <label class="form-label">Enter Value of fbs:</label>
+        <input type="number" name="fbs" class="form-control" required />
+        <label class="form-label">Enter Value of restecg:</label>
+        <input type="number" name="restecg" class="form-control" required />
+        <label class="form-label">Enter Value of thalach:</label>
+        <input
+          type="number"
+          name="thalach"
+          class="form-control"
+          step="any"
+          required
+        />
+        <label class="form-label">Enter Value of exang:</label>
+        <input type="number" name="exang" class="form-control" required />
+        <label class="form-label">Enter Value of oldpeak:</label>
+        <input
+          type="number"
+          name="oldpeak"
+          class="form-control"
+          step="any"
+          required
+        />
+        <label class="form-label">Enter Value of slope:</label>
+        <input type="number" name="slope" class="form-control" required />
+        <label class="form-label">Enter Value of ca:</label>
+        <input type="number" name="ca" class="form-control" required />
+        <label class="form-label">Enter Value of thal:</label>
+        <input type="number" name="thal" class="form-control" required />
+        <div class="center">
+          <input type="submit" value="Predict" class="btn-primary" />
+        </div>
+      </form>
+      {% if result is not none %}
+      <h3 class="text-center text-success">Prediction: {{ result }}</h3>
+      {% endif %}
+    </main>
+  </body>
+</html>

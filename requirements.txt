@@ -1,0 +1,9 @@
+pandas
+numpy
+scikit-learn
+flask
+pytest
+flake8
+h5py
+werkzeug
+gunicorn
