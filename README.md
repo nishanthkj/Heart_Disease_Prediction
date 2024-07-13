@@ -5,9 +5,17 @@
 
 This project is a web-based application that predicts the likelihood of heart disease based on user input. It uses a pre-trained Random Forest model to make predictions. The application is built using Flask, a lightweight web framework for Python.
 #### Supervised by 
-Prof. Agughasi Victor Ikechukwu, 
+[Prof. Agughasi Victor Ikechukwu](https://github.com/Victor-Ikechukwu), 
 (Assistant Professor) 
 Department of CSE, MIT Mysore)
+
+#### Collaborators
+- 4MH21CS020 [Deepika T R](https://github.com/Deepikatr199) 
+- 4MH21CS021 [Deepthi K](https://github.com/Deepthik05)
+- 4MH21CS065 [Nishanth K J](https://github.com/nishanthkj)
+- 4MH21CS099 [Skanda P M](https://github.com/Sk2003pm)
+
+
 
 ## WebSite
 [Heart Disease Prediction System](https://heart-disease-prediction-ef37.onrender.com/)
